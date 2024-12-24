@@ -10,7 +10,9 @@ const fetchMovies = async ({ queryKey }) => {
   const { data } = await request("/discover/movie", {
     params: {
       page: page,
+      without_genres:'18,10749',
       with_genres: selGenres,
+
     },
   });
   return data;

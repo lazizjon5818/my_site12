@@ -16,32 +16,27 @@ const MovieGridItem = ({ title, poster_path, vote_average, original_language, id
     setLiked(!liked);
   };
 
-  const imageUrl = poster_path
-    ? `${import.meta.env.VITE_IMAGE_URL}${poster_path}`
-    : "/path/to/placeholder-image.jpg"; // Add your fallback image URL here
-
   return (
     <div className="rounded-xl overflow-hidden flex flex-col relative">
-      <NavLink to={`/detail/${id}`} className="group">
+      <NavLink to={`/detail/${id}`}>
         <img
-          src={imageUrl}
-          alt={title || "No image available"}
-          className="w-full h-auto rounded-xl object-cover group-hover:scale-105 transition-transform duration-300"
+          src={`${import.meta.env.VITE_IMAGE_URL}${poster_path}`}
+          alt={title || "Rasm mavjud emas"}
+          className="w-full h-auto object-cover"
         />
       </NavLink>
-      <h3 className="bg-black text-white text-center py-4 rounded-b-xl truncate">
+      <h3 className="bg-black text-white text-center py-4 truncate">
         {title} - {original_language?.toUpperCase()}
       </h3>
-      <div className="flex justify-between items-center px-4 py-2">
-        <p className="text-white text-lg">{vote_average}</p>
-        <span
-          className="text-lg font-bold text-red-500 hover:text-red-600 transition-all duration-200 transform scale-100 hover:scale-110 cursor-pointer"
-          onClick={toggleLike}
-        >
-          <AiOutlineLike
-            className={`absolute top-2 right-2 ${liked ? "text-yellow-500" : "text-white"}`}
-          />
-        </span>
+      <div className="flex justify-center items-center flex-row bg-red-600">
+          <span
+            className="text-lg font-bold text-red-500 hover:text-red-600 transition-all duration-200 transform scale-100 hover:scale-110 cursor-pointer flex p-4 gap-3"
+            onClick={toggleLike}>
+            <AiOutlineLike className={`text-yellow-500 text-2xl ${liked ? "text-yellow-500 " : "text-slate-900"}`} />
+            <span className="text-black">
+            {vote_average}
+            </span>
+          </span>
       </div>
     </div>
   );
