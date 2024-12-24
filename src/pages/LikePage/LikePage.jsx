@@ -7,7 +7,7 @@ const LikePage = () => {
   const { likedMovies } = useLikedMovies();
 
   return (
-    <div className="p-4 container h-[61vh] flex flex-col justify-center items-center " >
+    <div className="p-4 container  flex flex-col justify-center items-center " >
       <h1 className="text-3xl font-bold mb-6">Sevimlilar</h1>
       {likedMovies.length === 0 ? (
         <p>Yoqtirilgan kinolar yuq</p>

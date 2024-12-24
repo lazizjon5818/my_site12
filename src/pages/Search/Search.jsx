@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Link } from "react-router-dom"; // Link import qilinadi
+import { Link } from "react-router-dom";
 
 const fetchMovies = async (query) => {
   const res = await fetch(
@@ -17,11 +17,11 @@ const Search = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["searchMovies", query], 
     queryFn: () => fetchMovies(query),
-    enabled: query.length > 2, // Kamida 3 belgidan so'ng so'rov yuboriladi
+    enabled: query.length > 2,
   });
 
   return (
-    <div className="p-6 text-center container h-[61vh]">
+    <div className="p-6 text-center container ">
       <input
         type="text"
         placeholder="Search for movies..."
