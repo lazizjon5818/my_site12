@@ -7,7 +7,7 @@ function Layout() {
   return (
     <div>
       <Header/>
-        <main>
+        <main className='min-h-[71vh]'>
           <Outlet/> 
         </main>
       <Footer/>

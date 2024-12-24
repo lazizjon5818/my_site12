@@ -17,7 +17,7 @@ export const Carousel = ({ data }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className="my-5 container mx-auto">
+    <div className="container mx-auto">
       {/* Main Swiper */}
       <Swiper
         style={{
