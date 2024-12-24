@@ -78,7 +78,7 @@ function Detail() {
 
   console.log(genres)
 
-//   console.log(movieDetails,duration,popularity,voteCount,voteAverage,director,cast,posterPath); // APIdan olingan malumotlar
+//   console.log(movieDetails,duration,popularity,voteCount,voteAverage,director,cast,posterPath);
 
   const handleButtonClick = (buttonNumber) => {
     setActiveButton(buttonNumber);

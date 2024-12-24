@@ -12,7 +12,7 @@ import { memo } from "react";
 
 const Movies = ({ data }) => {
   return (
-    <div className="container justify-center mt-24 ">
+    <div className="container justify-center ">
       <Swiper
         loop={true}
         navigation={true}

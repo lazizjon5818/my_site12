@@ -4,6 +4,7 @@ import { MdOutlineVibration } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 import { IoTvSharp } from "react-icons/io5";
+import { AiOutlineLike } from "react-icons/ai";
 import logo from "@/assets/logos/logo.png";
 
 const navLinks = [
@@ -27,6 +28,11 @@ const navLinks = [
     to: "/search",
     icon: <FiSearch className="text-[20px]" />,
   },
+  {
+    label: "Liked",
+    to: "/liked",
+    icon: <AiOutlineLike className="text-[20px]" />,
+  }
 ];
 
 const lang = [
